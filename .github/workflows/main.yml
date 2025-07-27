@@ -38,3 +38,22 @@ jobs:
         with:
           name: build-zip
           path: build.zip
+      
+      - name: Notify Success via email
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: sujeet05kp@gmail.com
+          password: tpew rxlv hdng pofd
+          subject: "CI Build success-${{github.repository}}"
+          body: |
+            The build for ${{github.repository}} on branch ${{github.ref_name}} succeeded.
+            commit: ${{github.sha}} |
+          to: sujeet05kp@gmail.com
+          from: sujeet05kp@gmail.com
+          
+
+
+
