@@ -46,14 +46,14 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 587
           username: sujeet05kp@gmail.com
-          password: tpew rxlv hdng pofd
+          password: yourpassword
           subject: "CI Build success-${{github.repository}}"
           body: |
             The build for ${{github.repository}} on branch ${{github.ref_name}} succeeded.
             commit: ${{github.sha}} |
           to: sujeet05kp@gmail.com
           from: sujeet05kp@gmail.com
-          
+
 
 
 
